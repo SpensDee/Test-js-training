@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+
+<body>
+    <header>
+
+
+
+    <section class="First-page">
+
+        <div class="container">
+            <h1>Color Picker</h1>
+            <p id="blend__input">#000</p>
+            <div class="flex">
+                <input id="ColorOne" type="color">
+                <button>Blend</button>
+            </div>
+        </div>
+
+         <div class="container">
+             <div class="calculator">
+                <h1 class="calculator__title">Калькулятор</h1>
+                <div class="calculator__txt-wrapper">
+                    <p class="calculator__txt">total:</p>
+                    <P class="calculator__total"></P>
+                </div>
+                    <div class="calculator__input">
+                        <input class ="calculator__value" type="number" value="">
+                        <input class ="calculator__value2" type="number" value="">
+                    </div>
+                    <div class="calculator__btns">
+                        <button onclick="plus()" class="calculator__btn plus">+</button>
+                        <button onclick="minus()" class="calculator__btn minus">-</button>
+                        <button onclick="multiply()" class="calculator__btn multiply">x</button>
+                        <button onclick="share()" class="calculator__btn share">/</button>
+                    </div>
+            </div> 
+        </div>
+
+        <div class="container">
+                    <h1 class="speed__title">Калькулятор скорости звука</h1>
+                 <div class="speed__wrapper">  
+                        <p class="speed__total">Result:</p>
+                    
+                    <input class="speed__input" type="number" value="р" placeholder="Расстояние в метрах">
+                    <button class="speed__button" onclick="speed()">Result</button>
+                </div>
+                <p class="speed__descroption">Узнайте за какое время звук преодолеет указаное расстояние</p>
+         </div>
+
+         <div class="container">
+             
+             <h1 class="credit__title">Калькулятор кредита</h1>
+
+             <p class="credit__all credit__text">Всего:</p>
+             <p class="credit__result credit__text">Переплата:</p>
+             <p class="credit__month credit__text">Месяцев:</p>
+                 <div class="credit__main">
+                    <div class="credit__inputs">
+                        <input class="credit__value1" type="number" placeholder="сумма">
+                        <input class="credit__value2" type="number" placeholder="проценты">
+                    </div>
+                    <div class="credit__footer">
+                        <input class="credit__value3" type="range" min="1" max="12" step="1">
+
+                        <button class="credit_btn">$</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container ">
+                <div class="gallery">
+                    <h1>Slider</h1>
+                    <div class="gallery__images">                       
+                            <img class="gallery__hidden gallery__shower" src="img/image1.jpg" alt="">                                               
+                            <img class="gallery__hidden" src="img/image2.png" alt="">                                               
+                            <img class="gallery__hidden" src="img/image3.jpg" alt="">                                               
+                            <img class="gallery__hidden" src="img/image4.png" alt="">                        
+                    </div>
+                    <div class="gallery__btn">
+                        <button  onclick="prew()" class="gallery__prew"><div class="gallery__arrow-prew"></div></button>
+                        <button onclick="next()" class="gallery__next"><div class="gallery__arrow-next"></div></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mode">
+                <h1>Day/Night mode</h1>
+                <div>
+                    <div class="mode__btns">
+                        <input type="checkbox" class="checkbox" id="checkbox">
+                        <label for="checkbox" class="label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                        <p class="mode__lorem"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sequi iste est cupiditate aut dolores sint ad facilis illum. Temporibus quas, veritatis ipsam sit animi nam nihil repellendus consectetur ipsa.Suscipit vitae eos debitis, eaque pariatur asperiores tenetur nulla iure dolorum recusandae ad, voluptates facere itaque quas minus repudiandae dolor dolores quos. Dicta atque mollitia iusto commodi, vitae ipsa vero?</span></p>
+                </div>                
+            </div>
+
+            <div class="container popup">
+                <h1>Popup</h1>
+                <div class="popup__container">
+                    <a class="modal1">Modal (click)</a>
+            <!--MODALS-->
+                    <div class="popup__wrapper ">
+                        <div class="popup__window popupNone" id="popup1"><button class="popup__btn">X</button><p class="popup__text">const popupOpen = document.querySelector('.popup__window');<br>
+                            const modal1 = document.querySelector('.modal1');<br>
+                            const popupClose = document.querySelector('.popup__btn');<br>
+                            <br>
+                            popupClose.addEventListener('click', () => {<br>
+                                popupOpen.classList.add('popupNone') <br>
+                            }) <br>
+                            <br>
+                            modal1.addEventListener('click', () => {<br>
+                                popupOpen.classList.remove('popupNone')<br>
+                            })</p></div>
+                    </div>
+            <!--MODALS-->
+                </div>
+            </div>
+
+            <div class="container random">
+                <h1>Рандомайзер</h1>
+                <div class="random__container">
+                    <p class="random__result">1-100</p> 
+                    
+                </div>
+
+                <div class="random__wrapper">
+                    <button class="random__btn">Roll</button>
+                   
+                </div>
+            </div>
+
+
+            <div class="container barcoders">
+                <h1>Подбор штрих-кодов</h1>
+                <div class="barcodes__wrapper">
+                    <p class="barcodes__result"><img src="/img/barcode.png" alt=""></p>
+                    <input type="number" class="barcodes__input" value="" placeholder="код">
+                    <button class="barcodes__btn">узнать страну</button>
+                    <p class="barcodes__description"></p>
+                </div>
+            </div>
+
+
+            <div class="container casino">
+                <h1>Roll Game</h1>
+                <div class="scores__wrapper">
+                    <p class="score__dollar">$</p>
+                    <h2 class="casino__score">1000</h2>
+                </div>
+                <div class="rate__wrapper">
+                    <p class="rate__title">rate </p>
+                    <p class="rate">100</p>
+                </div>
+                <p class="casino__result">Roll</p> 
+                <p class="casino__data"></p>
+                <div class="casino__wrapper">
+                    <div class="less__btn-wrapper">
+                        <button class="less__btn">меньше</button>
+                    </div>
+                    <div class="more__btn-wrapper">
+                        <button class="more__btn">больше</button>
+                    </div>
+                </div>                
+            </div>
+
+
+            <div class="container openClose">
+                <h1 class="openClose__title">Открытие/закрытие блока</h1>
+                <div class="openClose__wrapper">
+                    <button id="openCloseBtn">Показать</button>
+                    <p class="openClose__text openClose__hidden">Далеко-далеко за
+                         словесными горами в стране, гласных и 
+                         согласных живут рыбные тексты. Алфавит, 
+                         коварный рыбными жизни вершину бросил 
+                         осталось заглавных себя необходимыми дороге,
+                          щеке текста, большой деревни дал речью свою
+                          рыбного не?</p>
+                </div>
+            </div>
+
+            <div class="container accorderon">
+                <h1>Menu Accordeon</h1>
+                <div class="accordeon__wrapper">
+                    
+                        <div class="accordeon__title">Блок 1. Заголовок</div>
+                        <div class="accordeon__content accordeon__block"><span>Блок 1. Контент</span>
+                        <p class="accordeon__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit at </p></div>  
+                    
+                        <div class="accordeon__title">Блок 2. Заголовок</div>
+                        <div class="accordeon__content accordeon__block"><span>Блок 2. Контент</span>
+                        <p class="accordeon__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit at </p></div>     
+                    
+                        <div class="accordeon__title">Блок 3. Заголовок</div>
+                        <div class="accordeon__content accordeon__block"><span>Блок 3. Контент</span>
+                        <p class="accordeon__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit at </p></div>     
+                    
+                        <div class="accordeon__title">Блок 4. Заголовок</div>
+                        <div class="accordeon__content accordeon__block "><span>Блок 4. Контент</span>
+                        <p class="accordeon__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit at </p></div>     
+                </div>
+            </div>
+
+            <div class="container accorderon2">
+                <h1>Menu Accordeon 2.0</h1>
+                <div class="accordeon__wrapper2">
+                    
+                        <div class="accordeon__item">Блок 1. Заголовок
+                            <div class="accordeon__content2">
+                                class="accordeon__txt2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit 
+                            </div>
+                        </div>
+                      <div class="accordeon__item">Блок 2. Заголовок
+                        <div class="accordeon__content2">
+                                class="accordeon__txt2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit 
+                            </div>     
+                        </div>
+                      <div class="accordeon__item">Блок 3. Заголовок
+                        <div class="accordeon__content2">
+                                class="accordeon__txt2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit 
+                            </div>     
+                        </div>  
+     
+                </div>
+            </div>
+
+    </section>
+    </header>
+<script src="js/main.js"></script>
+  
+</body>
+
+</html>
